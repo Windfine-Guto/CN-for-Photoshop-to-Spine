@@ -8,7 +8,7 @@
 ## 插件功能介绍  
 [官方说明文档](https://github.com/EsotericSoftware/spine-scripts/tree/master/photoshop)  
 
-  ![img](https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png)  
+  ![img]([https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png](https://raw.githubusercontent.com/Windfine-Guto/CN-for-Photoshop-to-Spine/refs/heads/main/covers/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png))  
 #### 设置  
   • `忽略隐藏图层`不输出隐藏的组和图层。  
   • `忽略背景图层`不输出背景图层。  
