@@ -8,7 +8,7 @@
 ## 插件功能介绍  
 [官方说明文档](https://github.com/EsotericSoftware/spine-scripts/tree/master/photoshop)  
 
-  ![img]([https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png](https://raw.githubusercontent.com/Windfine-Guto/CN-for-Photoshop-to-Spine/refs/heads/main/covers/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png))  
+  ![img](https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png](https://raw.githubusercontent.com/Windfine-Guto/CN-for-Photoshop-to-Spine/refs/heads/main/covers/%E6%8F%92%E4%BB%B6%E4%B8%BB%E9%A1%B5%E9%9D%A2.png)  
 #### 设置  
   • `忽略隐藏图层`不输出隐藏的组和图层。  
   • `忽略背景图层`不输出背景图层。  
@@ -22,7 +22,7 @@
   • `输出路径`将写入图像文件的文件夹。  
   • `JSON输出路径`如果结尾为 ，则将写入的 JSON 文件。否则，将使用 PSD 文件的名称写入 JSON 文件的文件夹。`.json`   
   
-![img]([https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E5%B8%AE%E5%8A%A9%E9%A1%B5%E9%9D%A2.png](https://raw.githubusercontent.com/Windfine-Guto/CN-for-Photoshop-to-Spine/refs/heads/main/covers/%E5%B8%AE%E5%8A%A9%E9%A1%B5%E9%9D%A2.png))  
+![img](https://github.com/Windfine-Github/CN-for-Photoshop-to-Spine/blob/main/cover/%E5%B8%AE%E5%8A%A9%E9%A1%B5%E9%9D%A2.png](https://raw.githubusercontent.com/Windfine-Guto/CN-for-Photoshop-to-Spine/refs/heads/main/covers/%E5%B8%AE%E5%8A%A9%E9%A1%B5%E9%9D%A2.png)  
 #### 标签  
 方括号中的标签可用于图层和组名称以自定义输出。标签可以位于名称中的任何位置，例如 或 。如果省略，则使用图层或组名称。`head [slot][slot] head:name`  
   
