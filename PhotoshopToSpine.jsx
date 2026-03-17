@@ -1,4 +1,4 @@
-﻿#target photoshop
+#target photoshop
 app.bringToFront();
 
 // https://github.com/EsotericSoftware/spine-scripts/tree/master/photoshop
@@ -21,12 +21,12 @@ var legacyJson = true; // Set to false to output the newer Spine JSON format.
 
 var cs2 = parseInt(app.version) < 10, cID = charIDToTypeID, sID = stringIDToTypeID, tID = typeIDToStringID;
 
-var originalDoc, setting, progress, cancel, errors, lastLayerName;
+var originalDoc, settings, progress, cancel, errors, lastLayerName;
 try {
 	originalDoc = activeDocument;
 } catch (ignored) {}
 
-var defaultSetting = {
+var defaultSettings = {
 	ignoreHiddenLayers: false,
 	ignoreBackground: true,
 	writeTemplate: false,
@@ -594,7 +594,7 @@ function showSettingsDialog () {
 	dialog.alignChildren = "fill";
 
 	try {
-		dialog.add("image", undefined, new File(criptDir() + "logo.png"));
+		dialog.add("image", undefined, new File(scriptDir() + "logo.png"));
 	} catch (ignored) {}
 
 	var settingsGroup = dialog.add("panel", undefined, "设置");
@@ -622,7 +622,7 @@ function showSettingsDialog () {
 				writeTemplateCheckbox.value = settings.writeTemplate;
 				var selectionOnlyCheckbox = group.add("checkbox", undefined, " 仅限选中图层");
 				selectionOnlyCheckbox.value = settings.selectionOnly;
-		var caleText, paddingText, caleSlider, paddingSlider;
+		var scaleText, paddingText, scaleSlider, paddingSlider;
 		if (!cs2) {
 			var slidersGroup = settingsGroup.add("group");
 				group = slidersGroup.add("group");
@@ -632,8 +632,8 @@ function showSettingsDialog () {
 					group.add("statictext", undefined, "像素填充:");
 				group = slidersGroup.add("group");
 					group.orientation = "column";
-caleText = group.add("edittext", undefined, settings.cale * 100);
-caleText.characters = 4;
+					scaleText = group.add("edittext", undefined, settings.scale * 100);
+					scaleText.characters = 4;
 					paddingText = group.add("edittext", undefined, settings.padding);
 					paddingText.characters = 4;
 				group = slidersGroup.add("group");
@@ -644,14 +644,14 @@ caleText.characters = 4;
 					group.orientation = "column";
 					group.alignChildren = ["fill", ""];
 					group.alignment = ["fill", ""];
-caleSlider = group.add("slider", undefined, settings.cale * 100, 1, 400);
+					scaleSlider = group.add("slider", undefined, settings.scale * 100, 1, 400);
 					paddingSlider = group.add("slider", undefined, settings.padding, 0, 4);
 		} else {
 			group = settingsGroup.add("group");
 				group.add("statictext", undefined, "Scale:");
-caleText = group.add("edittext", undefined, settings.cale * 100);
-caleText.preferredSize.width = 50;
-caleSlider = settingsGroup.add("slider", undefined, settings.cale * 100, 1, 400);
+				scaleText = group.add("edittext", undefined, settings.scale * 100);
+				scaleText.preferredSize.width = 50;
+			scaleSlider = settingsGroup.add("slider", undefined, settings.scale * 100, 1, 400);
 			group = settingsGroup.add("group");
 				group.add("statictext", undefined, "Padding:");
 				paddingText = group.add("edittext", undefined, settings.padding);
@@ -865,7 +865,7 @@ function showHelpDialog () {
 	dialog.alignment = ["", "top"];
 
 	var helpText = dialog.add("statictext", undefined, ""
-		+ "此脚本功能是将图层分层导出成图像，并创建一个JSON文件，以便将图像以 Photoshop 中相同的位置和绘制顺序导入 Spine 中。\n"
+		+ "此脚本功能是将图层分层导出成图像，并创建一个JSON文件，以便将图像以Photoshop 中相同的位置和绘制顺序导入Spine中\n"
 		+ "\n"
 		+ "Photoshop 中的标尺原点对应于 Spine 中的 0,0。\n"
 		+ "\n"
